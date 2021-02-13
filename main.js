@@ -24,7 +24,7 @@ function submitIssue(e) {
 	e.preventDefault();
 }
 
-// closed:
+// closed Function:
 const setStatusClosed = (id) => {
 	const issues = JSON.parse(localStorage.getItem("issues"));
 	const currentIssue = issues.find((issue) => issue.id == id);
@@ -34,7 +34,7 @@ const setStatusClosed = (id) => {
 };
 
 
-// Delete:
+// Delete Function:
 const deleteIssue = (id) => {
 	const issues = JSON.parse(localStorage.getItem("issues"));
 	const remainingIssues = issues.filter((issue) => issue.id != id);
@@ -68,7 +68,7 @@ const fetchIssues = () => {
 	openList();
 };
 
-// OpenList:
+// OpenList Function:
 let openList = () => {
 	let show = document.getElementById("issuesList").childElementCount;
 	document.getElementById("TrackerCount").innerText = show;
